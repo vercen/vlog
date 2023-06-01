@@ -1,5 +1,6 @@
 # douyin_dome
 SpringBoot+Uniapp仿抖音短视频App
+需要前端uinapp可以私信
 
 只用修改api模块下面的配置即可运行
 
