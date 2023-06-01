@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: imooc-red-book-nacos
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.206.0.11:8848   # nacos 所在的地址
+        file-extension: yaml

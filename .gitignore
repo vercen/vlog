@@ -1,0 +1,6 @@
+# 项目排除路径
+/book-api/target/
+/book-common/target/
+/book-mapper/target/
+/book-model/target/
+/book-service/target/

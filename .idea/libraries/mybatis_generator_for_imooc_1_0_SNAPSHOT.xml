@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mybatis-generator-for-imooc-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mybatis-generator-for-imooc/target/mybatis-generator-for-imooc-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

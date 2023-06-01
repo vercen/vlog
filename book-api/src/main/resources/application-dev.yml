@@ -1,0 +1,59 @@
+server:
+  port: ${port:8099}
+
+spring:
+  datasource:                                     # 数据源的相关配置
+    type: com.zaxxer.hikari.HikariDataSource      # 数据源的类型，可以更改为其他的数据源配置，比如druid
+    driver-class-name: com.mysql.jdbc.Driver      # mysql/MariaDB 的数据库驱动类名称
+    url: jdbc:mysql://192.168.1.7:3306/imooc-red-book-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: root
+    hikari:
+      connection-timeout: 30000               # 等待连接池分配连接的最大时间（毫秒），超过这个时长还没有可用的连接，则会抛出SQLException
+      minimum-idle: 5                         # 最小连接数
+      maximum-pool-size: 20                   # 最大连接数
+      auto-commit: true                       # 自动提交
+      idle-timeout: 600000                    # 连接超时的最大时长（毫秒），超时则会被释放（retired）
+      pool-name: DataSourceHikariCP           # 连接池的名字
+      max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
+      connection-test-query: SELECT 1
+  redis:
+    host: 192.168.1.61
+    port: 6379
+    database: 0
+    password: itzixi
+  data:
+    mongodb:
+      uri: mongodb://root:root@192.168.1.202:27017
+      database: imooc-red-book
+  rabbitmq:
+    host: 192.168.1.204
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: imooc-red-book
+#  application:
+#    name: imooc-red-book-nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.159:8848   # nacos 所在的地址
+
+#counts: 100
+
+# 打开监控
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'
+
+# MinIO 配置
+minio:
+  endpoint: http://192.168.1.61:9000      # MinIO服务地址
+  fileHost: http://192.168.1.61:9000      # 文件地址host
+  bucketName: imooc                      # 存储桶bucket名称
+  accessKey: imooc                         # 用户名
+  secretKey: imooc123456                     # 密码
+  imgSize: 1024                           # 图片大小限制，单位：m
+  fileSize: 1024                          # 文件大小限制，单位：m
