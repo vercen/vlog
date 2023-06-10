@@ -1,4 +1,5 @@
-# douyin_dome
+# Haut短视频
+## Haut短视频是一个短视频类的App，拥有用户业务模块，短视频模块，粉丝业务模块，评论业务模块，消息业务模块，并且完整上线运行
 SpringBoot+Uniapp仿抖音短视频App
 需要前端uinapp可以私信
 
